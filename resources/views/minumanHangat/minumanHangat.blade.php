@@ -8,7 +8,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
-    <title>Document</title>
+    <title>Restoran Garuk</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -19,7 +19,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
@@ -34,7 +34,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">Minuman dingin</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item active">
                 <a class="nav-link" href="#">Minuman hangat</a>
               </li>
               <li class="nav-item">
@@ -47,5 +47,58 @@
           </form>
         </div>
       </nav>
+      <div class="row">
+          <h1> </h1>
+      </div>
+      <div class="container">
+        <div class="row">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Minuman Hangat</th>
+                    <th scope="col">Harga</th>
+                    <th scope="col">Jumlah</th>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Delete</th>
+                </tr>
+                </thead>
+                <tbody>
+                    @foreach ($minumanHangat as $MH)
+                        <tr>
+                            <td>{{$MH->id}}</td>
+                            <td>{{$MH->nama_minuman}}</td>
+                            <td>{{$MH->harga_minuman}}</td>
+                            <td>{{$MH->jumlah_minuman}}</td>
+                            <td><a href ="/minumanHangat/edit/{{$MH->id}}" type="button" class="btn btn-info">Ubah</a></td>
+                            <td><a href ="/minumanHangat/delete/{{$MH->id}}" type="button" class="btn btn-danger">Hapus</a></td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+        <form action="/minumanHangat/tambah" method="POST">
+                @csrf
+                <div class="col">
+                    <div class="form-group">
+                        <label >Nama Minuman Hangat</label>
+                        <input name="namaMinumanHangat"type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label >Harga</label>
+                        <input name="hargaMinumanHangat"type="text" class="form-control" >
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label >Jumlah</label>
+                        <input name="jumlahMinumanHangat"type="number" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
 </body>
 </html>

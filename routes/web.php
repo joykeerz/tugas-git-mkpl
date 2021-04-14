@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('minumanHangat','MinumanHangatController@tampil');
+Route::post('minumanHangat/tambah','MinumanHangatController@tambahData');
+
+Route::get('minumanHangat/edit/{id}','MinumanHangatController@editData');
+Route::post('minumanHangat/update/{id}','MinumanHangatController@updateData');
+Route::get('minumanHangat/delete/{id}','MinumanHangatController@deleteData');
