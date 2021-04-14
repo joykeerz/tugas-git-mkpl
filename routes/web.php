@@ -16,3 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('/MakananRingan', function () {
+//     return view('MakananRingan.MakananRingan');
+// });
+
+Route::get('/MakananRingan', 'MakananRinganController@tampil');
+Route::post('/MakananRingan/tambah','MakananRinganController@tambahData');
+Route::get('/MakananRingan/edit/{id}','MakananRinganController@editData');
+Route::post('/MakananRingan/update/{id}','MakananRinganController@updateData');
+Route::get('/MakananRingan/hapus/{id}','MakananRinganController@hapusData');
