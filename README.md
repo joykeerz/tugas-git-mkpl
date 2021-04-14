@@ -1,3 +1,8 @@
+<h1>Tentang Web Ini</h1>
+<p align="center"><img src="https://joykeerz.github.io/images/citeup.PNG"></p>
+Web app ini dibuat untuk persyaratan pengumpulan tugas github matakuliah MKPL.
+web app ini memiliki fitur CRUD stok berbagai jenis makanan
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
