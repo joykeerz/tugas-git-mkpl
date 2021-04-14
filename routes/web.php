@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 Route::get('/takjil', 'TakjilController@tampil');
 Route::post('/takjil/tambah', 'TakjilController@tambahData');
+
 Route::get('/takjil/edit/{id}', 'TakjilController@editData');
 Route::post('/takjil/update/{id}', 'TakjilController@updateData');
 Route::get('/takjil/hapus/{id}', 'TakjilController@hapusData');
