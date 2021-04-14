@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/maber','makananBeratController@tampil');
+Route::post('/maber/input','makananBeratController@inputData');
+
+Route::get('/maber/ubah/{id}','makananBeratController@ubahData');
+Route::post('/maber/perbarui/{id}','makananBeratController@perbaruiData');
+Route::get('/maber/buang/{id}','makananBeratController@buangData');
