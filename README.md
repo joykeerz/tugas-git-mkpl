@@ -1,5 +1,5 @@
 <h1>Tentang Web Ini</h1>
-<p align="center"><img src="https://joykeerz.github.io/images/citeup.PNG"></p>
+<p align="center"><img src="https://github.com/joykeerz/tugas-git-mkpl/blob/takjil/public/img/1618416988632.gif"></p>
 Web app ini dibuat untuk persyaratan pengumpulan tugas github matakuliah MKPL.
 web app ini memiliki fitur CRUD stok berbagai jenis makanan
 
