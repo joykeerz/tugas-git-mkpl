@@ -22,3 +22,9 @@ Route::post('/takjil/tambah', 'TakjilController@tambahData');
 Route::get('/takjil/edit/{id}', 'TakjilController@editData');
 Route::post('/takjil/update/{id}', 'TakjilController@updateData');
 Route::get('/takjil/hapus/{id}', 'TakjilController@hapusData');
+
+Route::get('/MakananPenutup', 'MakananPenutupController@tampil');
+Route::post('/MakananPenutup/tambah', 'MakananPenutupController@tambahData');
+Route::get('/MakananPenutup/edit/{id}', 'MakananPenutupController@editData');
+Route::post('/MakananPenutup/update/{id}', 'MakananPenutupController@updateData');
+Route::get('/MakananPenutup/hapus/{id}', 'MakananPenutupController@hapusData');
