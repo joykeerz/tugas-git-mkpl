@@ -43,5 +43,46 @@
           </form>
         </div>
       </nav>
+      <div class="container">
+        <div class="row">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nama minuman dingin</th>
+                    <th scope="col">Harga</th>
+                    <th scope="col">Jumlah</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    @foreach( $minuman_dingin as $minumanDingin)
+                    <tr>
+                        <td>{{$minumanDingin->id }} </td>
+                        <td>{{$minumanDingin->nama_minuman}} </td>
+                        <td>{{$minumanDingin->harga_minuman}} </td>
+                        <td>{{$minumanDingin->jumlah_minuman}} </td>
+                        <td><a class="btn btn-info" href="/minumandingin/edit/{{$minumanDingin->id}}">Ubah</a></td>
+                        <td><a class="btn btn-danger" href="/minumandingin/hapus{{$minumanDingin->id}}">Hapus</a></td>
+                    </tr @endforeach>
+                </tbody>
+              </table>
+        </div>
+        <form action="/minumandingin/tambah" method="POST">
+            @csrf
+            <div class="form-group">
+              <label for="exampleInputEmail1">Nama minuman dingin</label>
+              <input name="namaMinumanDingin" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Harga</label>
+              <input name="harga" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Jumlah</label>
+              <input name="jumlah" type="text" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+      </div>
 </body>
 </html>

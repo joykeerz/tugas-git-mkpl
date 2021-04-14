@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/minumandingin', 'MinumanDinginController@tampil');
+Route::post('/minumandingin/tambah', 'MinumanDinginController@tambahData');
+
+Route::get('/minumandingin/edit/{id}', 'MinumanDinginController@editData');
+Route::post('/minumandingin/update/{id}', 'MinumanDinginController@updateData');
+Route::get('/minumandingin/hapus/{id}', 'MinumanDinginController@hapusData');

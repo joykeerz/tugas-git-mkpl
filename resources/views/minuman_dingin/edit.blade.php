@@ -43,5 +43,25 @@
           </form>
         </div>
       </nav>
+      <div class="container">
+        <div class="row">
+        </div>
+        <form action="/minumandingin/update/{{$minuman_dingin->id}}" method="POST">
+            @csrf
+            <div class="form-group">
+              <label for="exampleInputEmail1">Nama minuman dingin</label>
+              <input name="namaMinumanDingin" value="{{$minuman_dingin->nama_minuman}}" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Harga</label>
+              <input name="harga" value="{{$minuman_dingin->harga_minuman}}" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Jumlah</label>
+              <input name="jumlah" value="{{$minuman_dingin->jumlah_minuman}}" type="text" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+      </div>
 </body>
 </html>
