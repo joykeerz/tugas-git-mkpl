@@ -26,3 +26,6 @@ Route::post('/MakananRingan/tambah','MakananRinganController@tambahData');
 Route::get('/MakananRingan/edit/{id}','MakananRinganController@editData');
 Route::post('/MakananRingan/update/{id}','MakananRinganController@updateData');
 Route::get('/MakananRingan/hapus/{id}','MakananRinganController@hapusData');
+
+Route::post('/MakananRingan/tambah/{id}','MakananRinganController@tambahJumlah');
+Route::post('/MakananRingan/kurang/{id}','MakananRinganController@kurangJumlah');

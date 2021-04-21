@@ -69,7 +69,18 @@
                 <td>{{$MakananRingan->id}}</td>
                 <td>{{$MakananRingan->nama_makanan}}</td>
                 <td>{{$MakananRingan->harga_makanan}}</td>
-                <td>{{$MakananRingan->jumlah_makanan}}</td>
+
+                <td> 
+                    <form action="/MakananRingan/kurang/{{$MakananRingan->id}}" method= "post"> @csrf <button>-</button> </form>
+                  
+                      {{$MakananRingan->jumlah_makanan}} 
+
+                    <form action="/MakananRingan/tambah/{{$MakananRingan->id}}" method= "post"> @csrf <button>+</button> </form>
+
+                    
+                
+                </td>
+
                 <td><a class="btn btn-info" href="/MakananRingan/edit/{{$MakananRingan->id}}">ubah</a></td>
                 <td><a class="btn btn-danger" href="/MakananRingan/hapus/{{$MakananRingan->id}}">hapus</a></td>
 
