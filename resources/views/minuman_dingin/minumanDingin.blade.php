@@ -60,7 +60,14 @@
                         <td>{{$minumanDingin->id }} </td>
                         <td>{{$minumanDingin->nama_minuman}} </td>
                         <td>{{$minumanDingin->harga_minuman}} </td>
-                        <td>{{$minumanDingin->jumlah_minuman}} </td>
+                        <td class="row"><form action="/minumandingin/kurang/{{$minumanDingin->id}}" method="post"> @csrf
+
+                            <button>-</button>&nbsp;&nbsp; </form>{{$minumanDingin->jumlah_minuman}}
+
+                            <form action="/minumandingin/tambah/{{$minumanDingin->id}}" method="post">@csrf
+
+                                &nbsp;&nbsp;<button>+</button></form></td>
+
                         <td><a class="btn btn-info" href="/minumandingin/edit/{{$minumanDingin->id}}">Ubah</a></td>
                         <td><a class="btn btn-danger" href="/minumandingin/hapus{{$minumanDingin->id}}">Hapus</a></td>
                     </tr @endforeach>
@@ -84,5 +91,6 @@
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
       </div>
+
 </body>
 </html>

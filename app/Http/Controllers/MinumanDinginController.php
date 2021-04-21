@@ -55,4 +55,16 @@ class MinumanDinginController extends Controller
 
         return view('minuman_dingin.minumanDingin', ['minuman_dingin' => $data]);
     }
+
+    public function tambahin($id)
+    {
+        DB::table('minuman_dingin')->where('id', $id)->increment('jumlah_minuman');
+        return redirect()->back();
+    }
+
+    public function kurangin($id)
+    {
+        DB::table('minuman_dingin')->where('id', $id)->decrement('jumlah_minuman');
+        return redirect()->back();
+    }
 }

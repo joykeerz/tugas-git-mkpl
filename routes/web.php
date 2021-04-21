@@ -23,3 +23,6 @@ Route::post('/minumandingin/tambah', 'MinumanDinginController@tambahData');
 Route::get('/minumandingin/edit/{id}', 'MinumanDinginController@editData');
 Route::post('/minumandingin/update/{id}', 'MinumanDinginController@updateData');
 Route::get('/minumandingin/hapus/{id}', 'MinumanDinginController@hapusData');
+
+route::post('/minumandingin/tambah/{id}', 'MinumanDinginController@tambahin');
+route::post('/minumandingin/kurang/{id}', 'MinumanDinginController@kurangin');
