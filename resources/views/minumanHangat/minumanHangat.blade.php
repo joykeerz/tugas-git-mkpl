@@ -69,7 +69,19 @@
                             <td>{{$MH->id}}</td>
                             <td>{{$MH->nama_minuman}}</td>
                             <td>{{$MH->harga_minuman}}</td>
-                            <td>{{$MH->jumlah_minuman}}</td>
+                            <td>
+                                <div class="row">
+                                    <form action="minumanHangat/tambah/{{$MH->id}}" method="POST">
+                                        @csrf
+                                        <button class="btn btn-info">+</button>&nbsp;
+                                    </form>
+                                    {{$MH->jumlah_minuman}}&nbsp;
+                                    <form action="minumanHangat/kurang/{{$MH->id}}" method="POST">
+                                        @csrf
+                                        <button class="btn btn-info">-</button>
+                                    </form>
+                                </div>
+                            </td>
                             <td><a href ="/minumanHangat/edit/{{$MH->id}}" type="button" class="btn btn-info">Ubah</a></td>
                             <td><a href ="/minumanHangat/delete/{{$MH->id}}" type="button" class="btn btn-danger">Hapus</a></td>
                         </tr>

@@ -22,3 +22,6 @@ Route::post('minumanHangat/tambah','MinumanHangatController@tambahData');
 Route::get('minumanHangat/edit/{id}','MinumanHangatController@editData');
 Route::post('minumanHangat/update/{id}','MinumanHangatController@updateData');
 Route::get('minumanHangat/delete/{id}','MinumanHangatController@deleteData');
+
+Route::post('minumanHangat/tambah/{id}','MinumanHangatController@tambahJumlah');
+Route::post('minumanHangat/kurang/{id}','MinumanHangatController@kurangJumlah');
