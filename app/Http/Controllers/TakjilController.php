@@ -67,4 +67,16 @@ class TakjilController extends Controller
         //abis nambahin data pergi ke halaman takjil
         return view('takjil.takjil', ['takjil' => $data]);
     }
+
+    public function tambahJumlah($id)
+    {
+        DB::table('takjil')->where('id', $id)->increment('jumlah_takjil');
+        return redirect()->back();
+    }
+
+    public function kurangJumlah($id)
+    {
+        DB::table('takjil')->where('id', $id)->decrement('jumlah_takjil');
+        return redirect()->back();
+    }
 }
