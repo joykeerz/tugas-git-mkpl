@@ -28,3 +28,5 @@ Route::post('/MakananPenutup/tambah', 'MakananPenutupController@tambahData');
 Route::get('/MakananPenutup/edit/{id}', 'MakananPenutupController@editData');
 Route::post('/MakananPenutup/update/{id}', 'MakananPenutupController@updateData');
 Route::get('/MakananPenutup/hapus/{id}', 'MakananPenutupController@hapusData');
+Route::post('/MakananPenutup/tambah/{id}', 'MakananPenutupController@tambah');
+Route::post('/MakananPenutup/kurang/{id}', 'MakananPenutupController@kurang');

@@ -62,9 +62,21 @@
                             <td>{{$makananPenutup->id}}</td>
                             <td>{{$makananPenutup->nama_makanan}}</td>
                             <td>{{$makananPenutup->harga_makanan}}</td>
-                            <td>{{$makananPenutup->jumlah_makanan}}</td>
+                            <td class='row'>
+                            <form action="/MakananPenutup/kurang/{{$makananPenutup->id}}" method="post">
+                            @csrf
+                            <button>-</button>
+                            </form>
+                             {{$makananPenutup->jumlah_makanan}}
+                             <form action="/MakananPenutup/tambah/{{$makananPenutup->id}}" method="post">
+                             @csrf
+                             <button>+</button>
+                             </form>
+                            </td>
                             <td><a class="btn btn-info" href="/MakananPenutup/edit/{{$makananPenutup->id}}">ubah</a></td>
                             <td><a class="btn btn-danger" href="/MakananPenutup/hapus/{{$makananPenutup->id}}">Hapus</a></td>
+                            
+
                           
                         </tr>
                     @endforeach

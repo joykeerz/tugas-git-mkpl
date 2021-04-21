@@ -66,6 +66,16 @@ class MakananPenutupController extends Controller
         
         return view('makananPenutup.makananPenutup', ['makananPenutup' => $data]);
     }
+    public function tambah($id)
+    {
+        DB::table('makanan_penutup')->where('id',$id)->increment("jumlah_makanan");
+        return redirect()->back();
+    }
+    public function kurang($id)
+    {
+        DB::table('makanan_penutup')->where('id',$id)->decrement("jumlah_makanan");
+        return redirect()->back();
+    }
 }
 
 
