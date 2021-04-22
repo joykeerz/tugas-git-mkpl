@@ -28,3 +28,15 @@ Route::post('/takjil/tambah/{id}', 'TakjilController@tambahJumlah');
 Route::post('/takjil/kurang/{id}', 'TakjilController@kurangJumlah');
 
 
+// Route::get('/MakananRingan', function () {
+//     return view('MakananRingan.MakananRingan');
+// });
+
+Route::get('/MakananRingan', 'MakananRinganController@tampil');
+Route::post('/MakananRingan/tambah', 'MakananRinganController@tambahData');
+Route::get('/MakananRingan/edit/{id}', 'MakananRinganController@editData');
+Route::post('/MakananRingan/update/{id}', 'MakananRinganController@updateData');
+Route::get('/MakananRingan/hapus/{id}', 'MakananRinganController@hapusData');
+
+Route::post('/MakananRingan/tambah/{id}', 'MakananRinganController@tambahJumlah');
+Route::post('/MakananRingan/kurang/{id}', 'MakananRinganController@kurangJumlah');
