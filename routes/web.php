@@ -50,3 +50,12 @@ Route::get('/MakananRingan/hapus/{id}', 'MakananRinganController@hapusData');
 Route::post('/MakananRingan/tambah/{id}', 'MakananRinganController@tambahJumlah');
 Route::post('/MakananRingan/kurang/{id}', 'MakananRinganController@kurangJumlah');
 
+Route::get('/minumandingin', 'MinumanDinginController@tampil');
+Route::post('/minumandingin/tambah', 'MinumanDinginController@tambahData');
+
+Route::get('/minumandingin/edit/{id}', 'MinumanDinginController@editData');
+Route::post('/minumandingin/update/{id}', 'MinumanDinginController@updateData');
+Route::get('/minumandingin/hapus/{id}', 'MinumanDinginController@hapusData');
+
+route::post('/minumandingin/tambah/{id}', 'MinumanDinginController@tambahin');
+route::post('/minumandingin/kurang/{id}', 'MinumanDinginController@kurangin');
