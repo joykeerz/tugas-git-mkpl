@@ -19,10 +19,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Home </a>
+              <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#">Takjil</a>
+              <a class="nav-link" href="/takjil">Takjil</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Makanan berat</a>
@@ -62,7 +62,21 @@
                             <td>{{$takjil->id}}</td>
                             <td>{{$takjil->nama_takjil}}</td>
                             <td>{{$takjil->harga_takjil}}</td>
-                            <td>{{$takjil->jumlah_takjil}}</td>
+                            <td class="row">
+
+                              <form action="/takjil/kurang/{{$takjil->id}}" method="post">
+                                @csrf
+                                <button>-</button>&nbsp;&nbsp;
+                              </form>
+
+                              {{$takjil->jumlah_takjil}}
+
+                              <form action="/takjil/tambah/{{$takjil->id}}" method="post">
+                                @csrf
+                                &nbsp;&nbsp;<button>+</button>
+                              </form>
+
+                            </td>
                             <td><a class="btn btn-info" href="/takjil/edit/{{$takjil->id}}">ubah</a></td>
                             <td><a class="btn btn-danger" href="/takjil/hapus/{{$takjil->id}}">Hapus</a></td>
                         </tr>
