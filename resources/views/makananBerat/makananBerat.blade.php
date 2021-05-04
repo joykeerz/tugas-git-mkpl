@@ -65,9 +65,26 @@
         <td>{{$data->id}}</td>
         <td>{{$data->nama_makanan}}</td>
         <td>{{$data->harga_makanan}}</td>
-        <td>{{$data->jumlah_makanan}}</td>
+        <td class="row">
+
+                              <form action="/maber/kurang/{{$data->id}}" method="post">
+                                @csrf
+                                <button>-</button>&nbsp;&nbsp;
+                              </form>
+
+                              {{$data->jumlah_makanan}}
+
+                              <form action="/maber/tambah/{{$data->id}}" method="post">
+                                @csrf
+                                &nbsp;&nbsp;<button>+</button>
+                              </form>
+
+                            </td>
+
         <td><a class="btn btn-info" href="/maber/ubah/{{$data->id}}">ubah</a></td>
         <td><a onClick="return confirm('Beneran mau diapus?')" class="btn btn-danger" href="/maber/buang/{{$data->id}}">hapus</a></td>
+        
+        
     </tr>@endforeach
   </tbody>
 </table>

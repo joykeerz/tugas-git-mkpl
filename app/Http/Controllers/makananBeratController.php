@@ -48,4 +48,16 @@ class makananBeratController extends Controller
         return view('makananBerat.makananBerat',['data'=> $dataMakanan]);
     }
 
+    public function tambahJumlah($id)
+    {
+        DB::table('makanan_berat')->where('id', $id)->increment('jumlah_makanan');
+        return redirect()->back();
+    }
+
+    public function kurangJumlah($id)
+    {
+        DB::table('makanan_berat')->where('id', $id)->decrement('jumlah_makanan');
+        return redirect()->back();
+    }
+
 }
