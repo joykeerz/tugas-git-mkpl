@@ -68,3 +68,11 @@ Route::get('minumanHangat/delete/{id}', 'MinumanHangatController@deleteData');
 
 Route::post('minumanHangat/tambah/{id}', 'MinumanHangatController@tambahJumlah');
 Route::post('minumanHangat/kurang/{id}', 'MinumanHangatController@kurangJumlah');
+Route::get('/maber', 'makananBeratController@tampil');
+Route::post('/maber/input', 'makananBeratController@inputData');
+
+Route::get('/maber/ubah/{id}', 'makananBeratController@ubahData');
+Route::post('/maber/perbarui/{id}', 'makananBeratController@perbaruiData');
+Route::get('/maber/buang/{id}', 'makananBeratController@buangData');
+Route::post('/maber/tambah/{id}', 'makananBeratController@tambahJumlah');
+Route::post('/maber/kurang/{id}', 'makananBeratController@kurangJumlah');
